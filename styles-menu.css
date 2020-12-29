@@ -1,0 +1,69 @@
+body {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100%;
+  background: url("clouds-featured.png");
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+ul li {
+  list-style: none;
+  margin: 0px 20px;
+  transition: 0.5s;
+}
+
+ul li a {
+  display: block;
+  position: relative;
+  text-decoration: none;
+  padding: 10px;
+  font-size: 26px;
+  letter-spacing: 3px;
+  color: rgba(24, 16, 18, 0.74);
+  font-family: "Monterrast", fantasy;
+  transition: 0.5s;
+}
+
+ul:hover li a {
+  transform: scale(1.5);
+  opacity: 0.2;
+  filter: blur(7px);
+  color: rgb(22, 255, 80);
+}
+
+ul li a:hover {
+  transform: scale(2);
+  opacity: 1;
+  filter: blur(0);
+}
+
+ul li a:before {
+  content: "";
+  margin: 0px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #414141;
+  transition: 0.5s;
+  transform-origin: right;
+  transform: scaleX(0);
+  z-index: -1;
+  box-shadow: 5px 5px rgba(255, 0, 255, 0.6);
+}
+
+ul li a:hover:before {
+  transition: 0.5s;
+  transform-origin: left;
+  transform: scaleX(1);
+}

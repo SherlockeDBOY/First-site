@@ -1,0 +1,159 @@
+@import url("https://fonts.googleapis.com/css2?family=Bangers&family=Nova+Flat&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Nova Flat", cursive;
+}
+
+body {
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100vw;
+  background: url(ModelsBGa.jpg);
+}
+
+.container {
+  width: 1260px;
+  position: relative;
+  display: flex;
+  margin: 12vh auto;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 20px;
+}
+
+.container .Card {
+  position: relative;
+  width: 342.5px;
+  height: 180px;
+  background: #ffffff;
+  margin: 30px 20px;
+  padding: 20px 15px;
+  flex-direction: column;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5);
+  transition: 0.3s ease-in-out;
+}
+
+.container .Card:hover {
+  height: 280px;
+}
+
+.container .Card .imgBx {
+  position: relative;
+  width: 300px;
+  height: 200px;
+  top: -60px;
+  left: 20px;
+  z-index: 1;
+  overflow: hidden;
+  box-shadow: 0 5px 30px rgba(0, 0, 0, 0.2);
+}
+
+.container .Card .imgBx img {
+  max-width: 100%;
+  border-radius: 4px;
+}
+
+.container .Card .contentBx {
+  position: relative;
+  margin-top: -50px;
+  padding: 10px 15px;
+  visibility: hidden;
+  opacity: 0;
+  color: #000000;
+  transition: 0.3s ease-in-out;
+}
+
+.container .Card .contentBx h2 {
+  margin-bottom: 8px;
+  font-family: "Bangers", cursive;
+  letter-spacing: 3px;
+  text-align: center;
+}
+
+.container .Card .contentBx p {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.container .Card .contentBx span {
+  margin-top: 50px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-left: 55px;
+}
+.container .Card .contentBx span img {
+  filter: invert(1);
+}
+.container .Card .contentBx a {
+  text-decoration: none;
+  font-size: 20px;
+  letter-spacing: 3px;
+  color: #0a0a0a;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.container .Card .contentBx a:after {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.container .Card:hover .contentBx {
+  visibility: visible;
+  opacity: 1;
+}
+
+.btn {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.btn .button {
+  position: relative;
+  padding: 10px 30px;
+  border: 2.5px solid #ffffff;
+  border-radius: 10px;
+  font-size: 28px;
+  margin: 10px;
+  font-family: "Bangers";
+  display: inline-block;
+  text-decoration: none;
+  color: #ffffff;
+  letter-spacing: 3px;
+  transition: 0.6s;
+  overflow: hidden;
+}
+
+.btn .button:hover {
+  border-color: rgb(251, 255, 0);
+  color: #fffb00;
+}
+
+.btn span {
+  position: absolute;
+  display: block;
+  width: 0px;
+  height: 0px;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  background: #494949;
+  transition: width 0.5s, height 0.5s;
+  z-index: -1;
+  overflow: hidden;
+}
+
+.btn:hover span {
+  width: 300px;
+  height: 300px;
+  overflow: hidden;
+}

@@ -1,0 +1,102 @@
+@import url("https://fonts.googleapis.com/css2?family=Bangers&family=Nova+Flat&display=swap");
+
+body {
+  background-repeat: no-repeat;
+  background: 100vw 100vh url("IndexBg1.jpg");
+  height: 100vh;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  object-fit: fill;
+  font-family: "Montserrat", fantasy;
+}
+
+.layer2 {
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  width: 100%;
+  height: 100vh;
+  background-attachment: fixed;
+  background-position: center;
+  transition: 2s;
+}
+
+.layer2 .text h1 {
+  position: fixed;
+  font-size: 425px;
+  margin: 0;
+  font-weight: 900;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: url(Page01a.jpg) 50% 30%;
+  background-size: cover;
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+}
+
+.layer1 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 85%;
+  height: 60vh;
+  background-attachment: fixed;
+  background-position: center;
+  transition: 3s;
+  z-index: 1;
+}
+
+.layer1:hover {
+  box-shadow: 20px 55px 80px rgba(0, 0, 0, 1);
+}
+
+.btn {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  display: inline-flex;
+  justify-content: flex-end;
+  align-items: right;
+  overflow: hidden;
+}
+
+.btn .button {
+  position: relative;
+  padding: 10px 30px;
+  border: 3px solid #adadad;
+  font-size: 28px;
+  border-radius: 10px;
+  margin: 10px;
+  margin-left: 20px;
+  font-family: "Bangers";
+  display: inline-block;
+  text-decoration: none;
+  color: #00af75;
+  letter-spacing: 3px;
+  transition: 0.6s;
+  overflow: hidden;
+}
+
+.btn .button:hover {
+  color: #51fc68;
+}
+
+.btn span {
+  position: absolute;
+  display: block;
+  width: 0px;
+  height: 0px;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  background: #57035f;
+  transition: width 0.5s, height 0.5s;
+  z-index: -1;
+}
+
+.btn:hover span {
+  width: 300px;
+  height: 300px;
+}

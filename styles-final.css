@@ -1,0 +1,236 @@
+@import url("https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bangers&family=Nova+Flat&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Yellowtail&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lobster&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background: 100vw 100vh url(ModelsBG3.jpg);
+  background-position: center;
+  background-size: cover;
+}
+
+header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding: 40px 50px;
+  z-index: 1000;
+}
+
+.banner {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  padding: 0 100px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.banner .content {
+  max-width: 850px;
+  background-color: rgb(160, 160, 160);
+  border-radius: 25px;
+  padding: 50px;
+}
+
+.banner .content h2 {
+  text-transform: uppercase;
+  font-family: "Yellowtail", cursive;
+  font-weight: 500;
+  font-size: 2.5em;
+  letter-spacing: 0.1em;
+  color: #000000;
+}
+
+.banner .content h2 span {
+  font-weight: 1000;
+}
+
+.banner .content p {
+  font-size: 1.3em;
+  font-weight: 300;
+  font-family: "Lobster", cursive;
+  letter-spacing: 0.02em;
+  line-height: 1.2em;
+  margin: 15px 0 35px;
+}
+
+.play {
+  position: relative;
+  display: inline-flex;
+  justify-content: flex-start;
+  align-items: center;
+  color: #000000;
+  font-family: "Lobster", cursive;
+  text-transform: uppercase;
+  font-weight: 600;
+  text-decoration: none;
+  letter-spacing: 3px;
+  font-size: 1.5em;
+}
+
+.play img {
+  margin-right: 20px;
+  max-width: 50px;
+  filter: invert(1);
+}
+
+.inst {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 20px;
+  width: 60px;
+  height: 60px;
+  background-color: rgba(250, 237, 51, 0.959);
+  border-radius: 15px;
+  justify-content: center;
+  align-items: center;
+}
+
+.inst li {
+  list-style: none;
+}
+
+.inst img {
+  margin: 10px;
+  align-items: center;
+  filter: invert(0);
+}
+
+.vid {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10000;
+  background: rgba(0, 0, 0, 0.95);
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  visibility: hidden;
+  opacity: 0;
+}
+
+.vid.active {
+  visibility: visible;
+  opacity: 1;
+}
+.vid video {
+  max-width: 900px;
+  outline: none;
+}
+
+.vid .close {
+  position: fixed;
+  top: 30px;
+  left: 30px;
+  cursor: pointer;
+  filter: invert(1);
+  max-width: 32px;
+}
+
+.btn {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.btn .button {
+  position: relative;
+  padding: 10px 30px;
+  border: 2.5px solid #0a0a0a;
+  border-radius: 10px;
+  font-size: 28px;
+  margin: 30px;
+  font-family: "Bangers";
+  display: inline-block;
+  text-decoration: none;
+  color: #1a1818;
+  letter-spacing: 3px;
+  transition: 0.6s;
+  overflow: hidden;
+}
+
+.btn .button:hover {
+  border-color: rgb(251, 255, 0);
+  color: #fffb00;
+}
+
+.btn span {
+  position: absolute;
+  display: block;
+  width: 0px;
+  height: 0px;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  background: #494949;
+  transition: width 0.5s, height 0.5s;
+  z-index: -1;
+  overflow: hidden;
+}
+
+.btn:hover span {
+  width: 300px;
+  height: 300px;
+  overflow: hidden;
+}
+
+@media (max-width: 991px) {
+  header {
+    padding: 20px 50px;
+    margin-bottom: 50px;
+  }
+  header .logo {
+    font-size: 20px;
+    color: #000000;
+    padding: 5px 5px 5px 5px;
+    max-width: 80px;
+    background: rgba(135, 206, 235, 0.9);
+  }
+  .banner {
+    margin-top: 50px;
+    padding: 100px 50px;
+  }
+  .banner .content h2 {
+    font-weight: 400;
+    font-size: 2em;
+    letter-spacing: 0.02em;
+  }
+  .banner .content p {
+    font-size: 1em;
+  }
+  .inst {
+    position: absolute;
+    top: initial;
+    right: initial;
+    margin-left: -50px;
+    margin-top: 100px;
+    transform: translateY(-50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+  }
+
+  .vid video {
+    max-width: 90%;
+    outline: none;
+  }
+}
